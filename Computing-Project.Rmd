@@ -11,12 +11,19 @@ output: html_document
 
 This project seeks to analyze the differences between the measured absorbances of Artificial Blue Dye No.1, Spurilina-derived blue dye, and Natural blue dye from cabbage-infused water.
 
-```{r tables-mtcars}
-knitr::kable(iris[1:5, ], caption = 'A caption')
+```{r}
+absorbancedata <- read.table(header = TRUE, text = "Wavelength,Absorbance
+375,2.50
+405,2.50
+475,1.38
+495,2.35
+525,2.50")
 ```
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+Generating Table for artificial Blue Dye No.1 Absorbance.
+
+```{r}
+absorbancedata$Wavelength
 ```
 
 ## R Markdown
