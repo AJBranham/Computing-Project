@@ -9,6 +9,12 @@ output: html_document
 
 ## Analysis of Blue Dye Absorbance
 
+This project seeks to analyze the differences between the measured absorbances of Artificial Blue Dye No.1, Spurilina-derived blue dye, and Natural blue dye from cabbage-infused water.
+
+```{r tables-mtcars}
+knitr::kable(iris[1:5, ], caption = 'A caption')
+```
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
