@@ -44,6 +44,34 @@ Trial Table No. 2
 as.data.frame(absorbancedata, row.names = NULL, optional = FALSE)
 ```
 
+Importing data from Cabbage Absorbance and corresponding table.
+
+```{r}
+cabbagedata <- read.table(header = TRUE, text = "Absorbance  Wavelength
+0.56        375
+0.43        405
+0.46        475
+0.51        495
+0.91        525")
+```
+```{r}
+as.data.frame(cabbagedata, row.names = NULL, optional = FALSE)
+```
+
+Importing data from Spurilina-derived dye and corresponding table.
+
+```{r}
+spurilinadata <- read.table(header = TRUE, text = "Absorbance  Wavelength
+0.73        375
+0.59        405
+0.53        475
+0.64        495
+1.14        525")
+```
+```{r}
+as.data.frame(spurilinadata, row.names = NULL, optional = FALSE)
+```
+
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
