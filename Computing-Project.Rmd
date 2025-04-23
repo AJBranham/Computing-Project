@@ -12,18 +12,36 @@ output: html_document
 This project seeks to analyze the differences between the measured absorbances of Artificial Blue Dye No.1, Spurilina-derived blue dye, and Natural blue dye from cabbage-infused water.
 
 ```{r}
-absorbancedata <- read.table(header = TRUE, text = "Wavelength,Absorbance
-375,2.50
-405,2.50
-475,1.38
-495,2.35
-525,2.50")
+absorbancedata <- read.table(header = TRUE, text = "Absorbance  Wavelength
+2.50        375
+2.50        405
+1.38        475
+2.35        495
+2.50        525")
 ```
 
-Generating Table for artificial Blue Dye No.1 Absorbance.
+Generating Table for artificial Blue Dye No.1 Absorbance. Wavelenths measured listed below.
 
 ```{r}
 absorbancedata$Wavelength
+```
+
+Absorbance values for artificial Blue Dye No. 1 listed below.
+
+```{r}
+absorbancedata$Absorbance
+```
+
+Trial Table No.1
+
+```{r}
+table(absorbancedata$Wavelength, absorbancedata$Absorbance)
+```
+
+Trial Table No. 2
+
+```{r}
+as.data.frame(absorbancedata, row.names = NULL, optional = FALSE)
 ```
 
 ## R Markdown
