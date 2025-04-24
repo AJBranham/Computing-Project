@@ -54,6 +54,7 @@ cabbagedata <- read.table(header = TRUE, text = "Absorbance  Wavelength
 0.51        495
 0.91        525")
 ```
+
 ```{r}
 as.data.frame(cabbagedata, row.names = NULL, optional = FALSE)
 ```
@@ -68,9 +69,26 @@ spurilinadata <- read.table(header = TRUE, text = "Absorbance  Wavelength
 0.64        495
 1.14        525")
 ```
+
 ```{r}
 as.data.frame(spurilinadata, row.names = NULL, optional = FALSE)
 ```
+
+Importing data from Artificial Blue dye No. 1 and corresponding table.
+
+```{r}
+cabbagedata <- read.table(header = TRUE, text = "Absorbance  Wavelength
+2.50        375
+2.50        405
+1.38        475
+2.35        495
+2.50        525")
+```
+
+```{r}
+as.data.frame(cabbagedata, row.names = NULL, optional = FALSE)
+```
+
 
 ## R Markdown
 
