@@ -101,7 +101,30 @@ wavelengthdata <- read.table(header = TRUE, text = "Wavelength Cabbage Spurilina
 ```{r}
 as.data.frame(wavelengthdata, row.names = NULL, optional = FALSE)
 ```
+```{r}
+wavelengthsdata <- read.table(header = TRUE, text = "Cabbage Spurilina Blue
+0.56        0.73        2.50
+0.43        0.59        2.50
+0.46        0.53        1.38
+0.51        0.64        2.35
+0.91        1.14        2.50")  
+```
 
+```{r}
+boxplot(wavelengthsdata)
+```
+
+```{r}
+t.test(wavelengthdata, mu=0, alt="two.sided", conf=0.50, var.eq=F, paired=F)
+```
+
+```{r}
+t.test(wavelengthdata[wavelengthdata$Cabbage=="Cabbage"],
+       wavelengthdata[wavelengthdata$Spurilina=="Spurilina"],
+       wavelengthdata[wavelengthdata$Blue=="Blue"],
+      mu=0, alt="two.sided", conf=0, var.eq=F, paired=F)
+t.test()
+```
 
 ## R Markdown
 
