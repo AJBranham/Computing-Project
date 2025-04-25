@@ -90,7 +90,7 @@ as.data.frame(cabbagedata, row.names = NULL, optional = FALSE)
 ```
 
 ```{r}
-wavelengthdata <- read.table(header = TRUE, text = "Wavelength Cabbage Spurilina Blue
+wavelengthdata <- read.table(header = TRUE, text = "Wavelength Artificial Spurilina Natural
 375       0.56        0.73        2.50
 405       0.43        0.59        2.50
 475       0.46        0.53        1.38
@@ -98,11 +98,14 @@ wavelengthdata <- read.table(header = TRUE, text = "Wavelength Cabbage Spurilina
 525       0.91        1.14        2.50")  
 ```
 
+Importing data from Articial Blue dye No. 1, Spurilina-derived dye, and Natural and corresponding table.
+
 ```{r}
 as.data.frame(wavelengthdata, row.names = NULL, optional = FALSE)
 ```
+
 ```{r}
-wavelengthsdata <- read.table(header = TRUE, text = "Cabbage Spurilina Blue
+wavelengthsdata <- read.table(header = TRUE, text = "Artifical Spurilina Natural
 0.56        0.73        2.50
 0.43        0.59        2.50
 0.46        0.53        1.38
@@ -110,21 +113,18 @@ wavelengthsdata <- read.table(header = TRUE, text = "Cabbage Spurilina Blue
 0.91        1.14        2.50")  
 ```
 
+Boxplot of the absorbances of the Artificial, Spurilina, and Natural dyes.
+
 ```{r}
 boxplot(wavelengthsdata)
 ```
+
+T test from imported wavelength data
 
 ```{r}
 t.test(wavelengthdata, mu=0, alt="two.sided", conf=0.50, var.eq=F, paired=F)
 ```
 
-```{r}
-t.test(wavelengthdata[wavelengthdata$Cabbage=="Cabbage"],
-       wavelengthdata[wavelengthdata$Spurilina=="Spurilina"],
-       wavelengthdata[wavelengthdata$Blue=="Blue"],
-      mu=0, alt="two.sided", conf=0, var.eq=F, paired=F)
-t.test()
-```
 
 ## R Markdown
 
